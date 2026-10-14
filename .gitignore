@@ -41,7 +41,13 @@ out/
 .turbo/
 .cache/
 .parcel-cache/
+.vite/
+.rollup.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
 coverage/
+.nyc_output/
 .svelte-kit/
 .astro/
 
@@ -67,6 +73,10 @@ ENV/
 *.sqlite3
 *.db
 *.db-journal
+mongod.log
+*.pid
+*.seed
+*.pid.lock
 uploads/
 media/
 data/
@@ -81,6 +91,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.node_repl_history
 
 # ==========================================
 # Operating System Files
@@ -103,6 +114,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+*~
 *.sublime-project
 *.sublime-workspace
 .vscode/*
