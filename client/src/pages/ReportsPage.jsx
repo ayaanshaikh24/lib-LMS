@@ -69,7 +69,7 @@ const ReportsPage = () => {
     <div>
       {/* Printable Header - Only shown during browser printing */}
       <div className="print-only-header">
-        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>College Library Management System</h1>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Nexora Library Management System</h1>
         <h2 style={{ fontSize: '18px', margin: '4px 0' }}>
           Official Circulation & Audit Report: {reportType.toUpperCase()}
         </h2>

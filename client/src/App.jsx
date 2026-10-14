@@ -25,7 +25,7 @@ const ProtectedLayout = ({ children, requiredRole }) => {
   if (loading) {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-app)' }}>
-        <p style={{ color: 'var(--text-muted)' }}>Initializing College LMS session...</p>
+        <p style={{ color: 'var(--text-muted)' }}>Initializing Nexora session...</p>
       </div>
     );
   }
@@ -51,7 +51,7 @@ const ProtectedLayout = ({ children, requiredRole }) => {
     if (path.includes('/fines')) return 'Fines & Penalties Ledger';
     if (path.includes('/reports')) return 'Audit & Circulation Reports';
     if (path.includes('/my-books')) return 'My Borrowed Books';
-    return 'College Library Dashboard';
+    return 'Nexora Library Dashboard';
   };
 
   return (

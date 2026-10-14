@@ -47,7 +47,7 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'online',
     timestamp: new Date().toISOString(),
-    system: 'College Library Management System API'
+    system: 'Nexora Library Management System API'
   });
 });
 

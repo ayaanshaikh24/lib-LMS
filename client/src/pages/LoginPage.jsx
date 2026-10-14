@@ -54,7 +54,7 @@ const LoginPage = () => {
           <div className="login-brand-logo">
             <GraduationCap size={30} />
           </div>
-          <h2 className="login-brand-title">College Library Portal</h2>
+          <h2 className="login-brand-title">Nexora Library Portal</h2>
           <p className="login-brand-subtitle">
             Sign in to access circulation, books catalog, and academic records
           </p>

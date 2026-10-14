@@ -169,7 +169,7 @@ const BooksPage = () => {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <div>
-          <h2 style={{ fontSize: '20px', fontWeight: '800' }}>College Library Catalog</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: '800' }}>Nexora Library Catalog</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
             Browse, search, and manage all academic textbooks and reference volumes
           </p>

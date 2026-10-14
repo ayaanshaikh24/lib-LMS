@@ -23,7 +23,7 @@ const Sidebar = ({ mobileOpen, closeMobile }) => {
           <GraduationCap size={22} />
         </div>
         <div className="sidebar-brand-text">
-          <h1>College LMS</h1>
+          <h1>Nexora</h1>
           <p>Library System</p>
         </div>
       </div>
