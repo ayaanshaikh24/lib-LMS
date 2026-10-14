@@ -13,15 +13,15 @@ import {
   GraduationCap
 } from 'lucide-react';
 
+import NexoraLogo from './NexoraLogo';
+
 const Sidebar = ({ mobileOpen, closeMobile }) => {
   const { user, logout, canManage, isStudent } = useAuth();
 
   return (
     <aside className={`sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-header">
-        <div className="sidebar-brand-icon">
-          <GraduationCap size={22} />
-        </div>
+        <NexoraLogo size={34} />
         <div className="sidebar-brand-text">
           <h1>Nexora</h1>
           <p>Library System</p>

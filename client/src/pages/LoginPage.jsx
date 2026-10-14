@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { GraduationCap, Lock, Mail, AlertCircle, ArrowRight, ShieldCheck, BookOpen, User } from 'lucide-react';
+import { Lock, Mail, AlertCircle, ArrowRight, ShieldCheck, BookOpen, User } from 'lucide-react';
+import NexoraLogo from '../components/NexoraLogo';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -51,8 +52,8 @@ const LoginPage = () => {
     <div className="login-wrapper">
       <div className="login-card">
         <div className="login-brand-header">
-          <div className="login-brand-logo">
-            <GraduationCap size={30} />
+          <div style={{ display: 'inline-flex', marginBottom: '14px', filter: 'drop-shadow(0 8px 16px rgba(11, 16, 38, 0.35))' }}>
+            <NexoraLogo size={56} />
           </div>
           <h2 className="login-brand-title">Nexora Library Portal</h2>
           <p className="login-brand-subtitle">

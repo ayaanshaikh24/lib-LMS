@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Deep Navy Squircle Background -->
+    <linearGradient id="nexoraBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E132B" />
+      <stop offset="100%" stop-color="#050713" />
+    </linearGradient>
+
+    <!-- Electric Blue Diagonal Ribbon -->
+    <linearGradient id="electricBlue" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="25%" stop-color="#2563EB" />
+      <stop offset="70%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#1E40AF" />
+    </linearGradient>
+
+    <!-- Left Book Top Page (White to Pale Ice Blue) -->
+    <linearGradient id="bookPageTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#BFDBFE" />
+    </linearGradient>
+
+    <!-- Middle Page Arc -->
+    <linearGradient id="bookPageMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="60%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#93C5FD" />
+    </linearGradient>
+
+    <!-- Bottom Page Arc -->
+    <linearGradient id="bookPageBot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="60%" stop-color="#93C5FD" />
+      <stop offset="100%" stop-color="#60A5FA" />
+    </linearGradient>
+
+    <!-- Right Upright Stem Gradient -->
+    <linearGradient id="rightWing" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="20%" stop-color="#DBEAFE" />
+      <stop offset="65%" stop-color="#93C5FD" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base with #0B1026 Navy -->
+  <rect width="512" height="512" rx="114" fill="url(#nexoraBg)" />
+
+  <!-- ========================================================
+       1. Left Wing: Open Book Main Upper Page
+       ======================================================== -->
+  <path
+    d="M 125 135
+       L 174 135
+       C 174 135 186 195 204 260
+       C 212 288 217 312 217 326
+       C 188 304 156 294 125 292
+       Z"
+    fill="url(#bookPageTop)"
+  />
+
+  <!-- ========================================================
+       2. Left Wing: Middle Fanned Page Leaf
+       ======================================================== -->
+  <path
+    d="M 125 306
+       C 156 308 188 318 218 338
+       C 217 350 214 360 211 366
+       C 184 348 154 338 125 336
+       Z"
+    fill="url(#bookPageMid)"
+  />
+
+  <!-- ========================================================
+       3. Left Wing: Bottom Fanned Page Leaf
+       ======================================================== -->
+  <path
+    d="M 125 350
+       C 154 352 186 362 214 378
+       C 222 384 225 389 226 391
+       C 221 391 216 388 210 384
+       C 182 368 152 362 125 362
+       Z"
+    fill="url(#bookPageBot)"
+  />
+
+  <!-- ========================================================
+       4. Right Wing: Upright Stem of 'N'
+       ======================================================== -->
+  <path
+    d="M 315 135
+       L 387 135
+       L 387 356
+       C 387 356 382 364 374 354
+       C 358 334 338 276 320 220
+       L 315 196
+       Z"
+    fill="url(#rightWing)"
+  />
+
+  <!-- ========================================================
+       5. Dynamic Electric Blue Diagonal Ribbon
+       ======================================================== -->
+  <path
+    d="M 144 135
+       C 174 135 204 135 218 141
+       C 226 145 232 153 238 165
+       L 381 346
+       C 388 355 388 366 381 373
+       C 374 380 358 384 342 384
+       C 324 384 312 377 302 365
+       L 156 186
+       C 147 174 142 162 142 150
+       C 142 140 143 135 144 135
+       Z"
+    fill="url(#electricBlue)"
+  />
+</svg>
