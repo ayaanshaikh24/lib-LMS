@@ -109,7 +109,7 @@ const MyBooksPage = () => {
       {/* Tab Switcher */}
       <div className="card" style={{ marginBottom: '20px' }}>
         <div className="card-body" style={{ padding: '16px' }}>
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <div className="filters-controls-row">
             <button
               className={`btn btn-sm ${tab === 'active' ? 'btn-primary' : 'btn-outline'}`}
               onClick={() => setTab('active')}
@@ -122,12 +122,10 @@ const MyBooksPage = () => {
             >
               Returned History ({returnedLoans.length})
             </button>
-            <div style={{ marginLeft: 'auto' }}>
-              <Link to="/books" className="btn btn-secondary btn-sm">
-                <BookOpen size={14} />
-                <span>Search Library Catalog</span>
-              </Link>
-            </div>
+            <Link to="/books" className="btn btn-secondary btn-sm">
+              <BookOpen size={14} />
+              <span>Search Catalog</span>
+            </Link>
           </div>
         </div>
       </div>

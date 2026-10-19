@@ -36,7 +36,7 @@ const ConfirmModal = ({
         </div>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+      <div className="confirm-modal-actions">
         <button className="btn btn-outline" onClick={onClose} disabled={loading}>
           {cancelText}
         </button>

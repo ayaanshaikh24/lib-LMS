@@ -179,22 +179,9 @@ const DashboardPage = () => {
     <div>
       {/* Overdue Warning Banner */}
       {stats?.overdueBooks > 0 && (
-        <div
-          style={{
-            backgroundColor: 'var(--danger-light)',
-            border: '1px solid var(--danger-border)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '16px 20px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '12px',
-            marginBottom: '24px'
-          }}
-        >
+        <div className="overdue-alert-banner">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <AlertTriangle size={22} color="var(--danger)" />
+            <AlertTriangle size={22} color="var(--danger)" style={{ flexShrink: 0 }} />
             <div>
               <strong style={{ color: 'var(--danger-text)', fontSize: '14.5px' }}>
                 {stats.overdueBooks} Overdue {stats.overdueBooks === 1 ? 'Book' : 'Books'} Detected
@@ -257,7 +244,7 @@ const DashboardPage = () => {
       </div>
 
       {/* Quick Actions & Recent Activity Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+      <div className="dashboard-quick-grid">
         {/* Quick Actions */}
         <div className="card">
           <div className="card-header">
@@ -306,7 +293,7 @@ const DashboardPage = () => {
         </div>
 
         {/* Recent Circulation Activities */}
-        <div className="card" style={{ gridColumn: 'span 2' }}>
+        <div className="card dashboard-activity-card">
           <div className="card-header">
             <h3 className="card-title">
               <Repeat size={18} />

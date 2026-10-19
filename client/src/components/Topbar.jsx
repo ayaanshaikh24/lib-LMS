@@ -34,18 +34,21 @@ const Topbar = ({ toggleMobile, title }) => {
         <button className="mobile-toggle" onClick={toggleMobile} aria-label="Toggle menu">
           <Menu size={22} />
         </button>
-        <h2 className="breadcrumb-title">{title}</h2>
+        <h2 className="breadcrumb-title" title={title}>{title}</h2>
       </div>
 
       <div className="topbar-right">
-        {user && getRoleBadge(user.role)}
+        <div className="topbar-badge-container">
+          {user && getRoleBadge(user.role)}
+        </div>
         <button
           onClick={logout}
-          className="btn btn-secondary btn-sm"
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+          className="btn btn-secondary btn-sm topbar-logout-btn"
+          aria-label="Logout"
+          title="Logout"
         >
-          <LogOut size={14} />
-          <span>Logout</span>
+          <LogOut size={15} />
+          <span className="logout-text">Logout</span>
         </button>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
@@ -10,7 +10,8 @@ import {
   FileBarChart,
   BookMarked,
   LogOut,
-  GraduationCap
+  GraduationCap,
+  X
 } from 'lucide-react';
 
 import NexoraLogo from './NexoraLogo';
@@ -18,15 +19,42 @@ import NexoraLogo from './NexoraLogo';
 const Sidebar = ({ mobileOpen, closeMobile }) => {
   const { user, logout, canManage, isStudent } = useAuth();
 
+  // Prevent background scrolling when mobile sidebar is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   return (
-    <aside className={`sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
-      <div className="sidebar-header">
-        <NexoraLogo size={34} />
-        <div className="sidebar-brand-text">
-          <h1>Nexora</h1>
-          <p>Library System</p>
+    <>
+      <div
+        className={`sidebar-backdrop ${mobileOpen ? 'active' : ''}`}
+        onClick={closeMobile}
+        aria-hidden="true"
+      />
+      <aside className={`sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
+        <div className="sidebar-header">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, minWidth: 0 }}>
+            <NexoraLogo size={32} />
+            <div className="sidebar-brand-text">
+              <h1>Nexora</h1>
+              <p>Library System</p>
+            </div>
+          </div>
+          <button
+            className="sidebar-close-btn"
+            onClick={closeMobile}
+            aria-label="Close navigation menu"
+          >
+            <X size={20} />
+          </button>
         </div>
-      </div>
 
       <nav className="sidebar-nav">
         <div className="nav-section-title">Navigation</div>
@@ -120,7 +148,8 @@ const Sidebar = ({ mobileOpen, closeMobile }) => {
           </button>
         </div>
       </div>
-    </aside>
+      </aside>
+    </>
   );
 };
 

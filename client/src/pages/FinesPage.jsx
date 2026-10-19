@@ -128,7 +128,7 @@ const FinesPage = () => {
       {/* Filter Tabs */}
       <div className="card" style={{ marginBottom: '20px' }}>
         <div className="card-body" style={{ padding: '16px' }}>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <div className="filters-controls-row">
             <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-muted)' }}>Filter Ledger:</span>
             <button
               className={`btn btn-sm ${statusFilter === 'all' ? 'btn-primary' : 'btn-outline'}`}

@@ -79,7 +79,7 @@ const ReportsPage = () => {
       </div>
 
       {/* Screen Header */}
-      <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+      <div className="page-header-row no-print">
         <div>
           <h2 style={{ fontSize: '20px', fontWeight: '800' }}>Circulation & Audit Reports</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
@@ -97,7 +97,7 @@ const ReportsPage = () => {
       <div className="card no-print" style={{ marginBottom: '20px' }}>
         <div className="card-body" style={{ padding: '18px' }}>
           <form onSubmit={handleApplyDateFilter} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <div className="filters-controls-row">
               <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-muted)' }}>Report Type:</span>
               <button
                 type="button"
@@ -136,7 +136,7 @@ const ReportsPage = () => {
               </button>
             </div>
 
-            <div style={{ display: 'flex', gap: '14px', alignItems: 'center', flexWrap: 'wrap', paddingTop: '12px', borderTop: '1px solid var(--border)' }}>
+            <div className="filters-controls-row" style={{ paddingTop: '12px', borderTop: '1px solid var(--border)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <Calendar size={15} color="var(--text-muted)" />
                 <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-muted)' }}>From:</span>

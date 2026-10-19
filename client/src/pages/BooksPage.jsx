@@ -167,7 +167,7 @@ const BooksPage = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+      <div className="page-header-row">
         <div>
           <h2 style={{ fontSize: '20px', fontWeight: '800' }}>Nexora Library Catalog</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
@@ -225,7 +225,7 @@ const BooksPage = () => {
               />
             </div>
 
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div className="filters-controls-row">
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <Filter size={15} color="var(--text-muted)" />
                 <span style={{ fontSize: '12px', fontWeight: '600', color: 'var(--text-muted)' }}>Category:</span>
@@ -476,7 +476,7 @@ const BooksPage = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+          <div className="confirm-modal-actions" style={{ marginTop: '24px' }}>
             <button type="button" className="btn btn-outline" onClick={() => setIsModalOpen(false)}>
               Cancel
             </button>

@@ -168,7 +168,7 @@ const IssuesPage = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+      <div className="page-header-row">
         <div>
           <h2 style={{ fontSize: '20px', fontWeight: '800' }}>Circulation Desk: Issues & Returns</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
@@ -224,7 +224,7 @@ const IssuesPage = () => {
               />
             </div>
 
-            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <div className="filters-controls-row">
               <button
                 className={`btn btn-sm ${statusFilter === 'all' ? 'btn-primary' : 'btn-outline'}`}
                 onClick={() => setStatusFilter('all')}
@@ -424,7 +424,7 @@ const IssuesPage = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+          <div className="confirm-modal-actions" style={{ marginTop: '24px' }}>
             <button type="button" className="btn btn-outline" onClick={() => setIsIssueModalOpen(false)}>
               Cancel
             </button>
@@ -500,7 +500,7 @@ const IssuesPage = () => {
             </div>
           )}
 
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+          <div className="confirm-modal-actions">
             <button className="btn btn-outline" onClick={() => setIsReturnModalOpen(false)}>
               Cancel
             </button>
